@@ -35,6 +35,8 @@
 		}
 	}
 
-	triggerBttn.addEventListener( 'click', toggleOverlay );
+	if (triggerBttn != undefined) {
+		triggerBttn.addEventListener( 'click', toggleOverlay );
+	}
 	closeBttn.addEventListener( 'click', toggleOverlay );
 })();
