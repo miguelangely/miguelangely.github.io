@@ -1,2 +1,14 @@
 {
+  "name": "Mi blog",
+  "description": "La app de mi blog",
+  "launch_path": "/index.html",
+  "icons": {
+    "128": "/assets/images/icon128.png"
+  },
+  "type": "web",
+  "developer": {
+    "name": "Leonard Camacho",
+      "url": "http://lcamacho.github.io"
+  },
+  "version": "0.1"
 }
