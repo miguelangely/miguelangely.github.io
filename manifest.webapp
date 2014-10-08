@@ -11,5 +11,7 @@
       "url": "http://lcamacho.github.io"
   },
   "version": "0.1",
-  "fullscreen": "true"
+  "fullscreen": "true",
+  "chrome": "true",
+  "chrome": { "navigation": true }
 }
