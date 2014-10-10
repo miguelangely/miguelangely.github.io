@@ -1,8 +1,9 @@
 {
   "name": "mi blog",
-  "description": "este es mi blog"
+  "description": "este es mi blog",
   "icons": {
     "128": "/assets/images/icon128.png"
   },
-  "vesion": "0.1"
+  "vesion": "0.1",
+  "launch_path": "/index.html"
 }
