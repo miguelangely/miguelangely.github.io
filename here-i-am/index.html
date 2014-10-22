@@ -16,16 +16,23 @@
 
     
 
-    <link rel="stylesheet" type="text/css" href="../assets/css/normalize.css?v=9fe5b2ae77" />
-    <link rel="stylesheet" type="text/css" href="../assets/css/foundation.min.css?v=9fe5b2ae77" />
+    <link rel="stylesheet" type="text/css" href="../assets/css/normalize.css?v=2c59de5992" />
+    <link rel="stylesheet" type="text/css" href="../assets/css/foundation.min.css?v=2c59de5992" />
     <!--[if lte IE 8]>
-        <link rel="stylesheet" type="text/css" href="/assets/css/outdatedBrowser.min.css?v=9fe5b2ae77">
+        <link rel="stylesheet" type="text/css" href="/assets/css/outdatedBrowser.min.css?v=2c59de5992">
     <![endif]-->
-    <link rel="stylesheet" type="text/css" href="../assets/fonts/foundation-icons/foundation-icons.css?v=9fe5b2ae77" />
-    <link rel="stylesheet" type="text/css" href="../assets/css/styles.css?v=9fe5b2ae77" />
+    <link rel="stylesheet" type="text/css" href="../assets/fonts/foundation-icons/foundation-icons.css?v=2c59de5992" />
+    <link rel="stylesheet" type="text/css" href="../assets/css/styles.css?v=2c59de5992" />
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:300,700,400|Source+Sans+Pro:300,400,600,700,900,300italic,400italic,600italic,700italic,900italic" />
 
-    <link rel="resource" type="application/l10n" href="../assets/locales/locales.ini?v=9fe5b2ae77" />
+    <link rel="resource" type="application/l10n" href="../assets/locales/locales.ini?v=2c59de5992" />
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@leonardcamacho" />
+    <meta name="twitter:title" content="Here I am" />
+    <meta name="twitter:description" content="undefined" />
+    <meta name="twitter:image" content="/content/images/2014/Aug/reactor_arc_thumbnail-4.png" />
+    <meta name="twitter:url" content="/here-i-am/" />
 
     
     <meta name="generator" content="Ghost 0.5" />
@@ -73,7 +80,7 @@
                 <!-- <li><a class="fi-torso" href="http://my-ghost-blog.com/about"></a></li>
                 <li><a class="fi-mail" href="http://my-ghost-blog.com/contact"></a></li> -->
             </ul>
-            <a class="blog-logo" href="../index.html"><img alt="Leonard Camacho blog" src="../content/images/2014/Aug/reactor_arc_thumbnail-4.png" alt="Blog Logo" width="96" height="96"/></a>
+            <a class="blog-logo" href="../index.html"><img alt="Leonard Camacho blog" src="../content/images/2014/Aug/reactor_arc_thumbnail-4.png" width="96" height="96"/></a>
             <h1 class="blog-title">Leonard Camacho blog</h1>
             <hr>
             <p class="blog-description">Mi espacio en internet</p>
@@ -132,7 +139,7 @@
 
 <p>PD: I'm not a native speaking English person so forgive me if I made some mistakes, from now on I'm going to improve.</p>
                         
-                        <aside class="tags fi-pricetag-multiple">No tag</aside>
+                        <aside class="tags fi-pricetag-multiple" data-l10n-id="no-tag">No tag</aside>
                         
             </section>
             <hr>
@@ -171,16 +178,31 @@
 
             </footer>
 
+        <!-- github -->
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-1597030062345622"
+             data-ad-slot="9442663192"
+             data-ad-format="auto"></ins>
+        <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+
         
         <h3 class="title-disqus"><span class="fi-comments"></span><span data-l10n-id="discussions">Discussions</span></h3>
         <div id="disqus_thread"></div>
 <script type="text/javascript">
+    var disqus_shortname = 'leonardcamachoblog'; // required: replace example with your forum shortname
+    var disqus_identifier = '3'; // make sure to use the post.id as an identifier, otherwise disqus will use the pages url per default, which might be problematic...
+    var disqus_config;
+
     window.addEventListener('localized', function() {
-        var disqus_shortname = 'leonardcamachoblog'; // required: replace example with your forum shortname
-        var disqus_identifier = '3'; // make sure to use the post.id as an identifier, otherwise disqus will use the pages url per default, which might be problematic...
-        var disqus_config = function () {
-            this.language = 'es_MX';
-        };
+
+        if ('es' === document.webL10n.getLanguage().replace(/-[a-z0-9]+$/i, '')) {
+            disqus_config = function () {
+                this.language = 'es_MX';
+            };
+        }
 
         /* * * DON'T EDIT BELOW THIS LINE * * */
         (function() {
@@ -202,24 +224,26 @@
 </div>
 
     
-    <script src="../public/jquery.min.js?v=9fe5b2ae77"></script>
+    <script src="../public/jquery.min.js?v=2c59de5992"></script>
 
     
     <!--[if lte IE 8]>
-        <script type="text/javascript" src="/assets/js/outdatedBrowser.min.js?v=9fe5b2ae77"></script>
+        <script type="text/javascript" src="/assets/js/outdatedBrowser.min.js?v=2c59de5992"></script>
     <![endif]-->
-    <script type="text/javascript" src="../assets/js/vendor/fastclick.js?v=9fe5b2ae77"></script>
-    <script type="text/javascript" src="../assets/js/vendor/modernizr.js?v=9fe5b2ae77"></script>
-    <script type="text/javascript" src="../assets/js/l10n.js?v=9fe5b2ae77"></script>
+    <script type="text/javascript" src="../assets/js/vendor/fastclick.js?v=2c59de5992"></script>
+    <script type="text/javascript" src="../assets/js/vendor/modernizr.js?v=2c59de5992"></script>
+    <script type="text/javascript" src="../assets/js/l10n.min.js?v=2c59de5992"></script>
 
-    <script type="text/javascript" src="../assets/js/jquery.fitvids.js?v=9fe5b2ae77"></script>
-    <script type="text/javascript" src="../assets/js/index.js?v=9fe5b2ae77"></script>
+    <script type="text/javascript" src="../assets/js/jquery.fitvids.js?v=2c59de5992"></script>
+    <script type="text/javascript" src="../assets/js/index.js?v=2c59de5992"></script>
 
-    <script type="text/javascript" src="../assets/js/foundation.min.js?v=9fe5b2ae77"></script>
-    <script type="text/javascript" src="../assets/js/overlay/snap.svg-min.js?v=9fe5b2ae77"></script>
-    <script type="text/javascript" src="../assets/js/overlay/classie.js?v=9fe5b2ae77"></script>
-    <script type="text/javascript" src="../assets/js/overlay/demo1.js?v=9fe5b2ae77"></script>
-    <script type="text/javascript" src="../assets/js/vendor/smoothscroll.js?v=9fe5b2ae77"></script>
+    <script type="text/javascript" src="../assets/js/foundation.min.js?v=2c59de5992"></script>
+    <script type="text/javascript" src="../assets/js/overlay/snap.svg-min.js?v=2c59de5992"></script>
+    <script type="text/javascript" src="../assets/js/overlay/classie.js?v=2c59de5992"></script>
+    <script type="text/javascript" src="../assets/js/overlay/demo1.js?v=2c59de5992"></script>
+    <script type="text/javascript" src="../assets/js/vendor/smoothscroll.js?v=2c59de5992"></script>
+
+    <script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 
     <script>
       $(document).foundation();
