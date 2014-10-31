@@ -1,5 +1,139 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Leonard Camacho blog]]></title><description><![CDATA[Mi espacio en internet]]></description><link>https://lcamacho.github.io/</link><generator>Ghost 0.5</generator><lastBuildDate>Wed, 22 Oct 2014 22:40:45 GMT</lastBuildDate><atom:link href="https://lcamacho.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Aqui estoy]]></title><description><![CDATA[<p>Creo que si lo pienso mucho nunca terminare de escribir este post, asi que aqui voy.</p>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Leonard Camacho blog]]></title><description><![CDATA[Mi espacio en internet]]></description><link>https://lcamacho.github.io/</link><generator>Ghost 0.5</generator><lastBuildDate>Fri, 31 Oct 2014 01:00:17 GMT</lastBuildDate><atom:link href="https://lcamacho.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Localization in browser and the es-419 case]]></title><description><![CDATA[<p>Trying to get this blog to adapt to user's language I struck with a couple of issues:</p>
+
+<ol>
+<li>Ghost, the blogging platform that I'm using doesn't have a way to create and use translations.  </li>
+<li>I can't detect on backend because this blog is on github pages.</li>
+</ol>
+
+<p>That means the only way is to use javascript to detect user's language and localize.</p>
+
+<p>Luckly Mozilla faced this issue so they create the webl10n proyect and the way to use it is really simple: </p>
+
+<ul>
+<li>You have to create a locales.ini file, where you're going to indicate all the languages that you want to detect and the path to files where translations are located.</li>
+</ul>
+
+<pre><code>@import url(es/app.properties)
+[en]
+@import url(en/app.properties)
+</code></pre>
+
+<ul>
+<li>Then create translation files, in this case app.properties, inside you need to write the phrase id and translation.</li>
+</ul>
+
+<pre><code class="        ">read-more = Leer más
+share-it = ¿Te gusto el artículo? Compartelo.
+</code></pre>
+
+<ul>
+<li>You've to add the library and the locales.ini file to page.</li>
+</ul>
+
+<pre><code class="html        ">&lt;link rel="resource" type="application/l10n" href="locales/locales.ini"&gt;
+&lt;script type="text/javascript" src="js/l10n.js"&gt;
+</code></pre>
+
+<ul>
+<li>Finally add phrase id to html using "data-l10n-id" attribute.</li>
+</ul>
+
+<pre><code class="html">&lt;h4 data-l10n-id="share-it"&gt;Liked this post ? Share it.&lt;/h4&gt;
+</code></pre>
+
+<p>If you want more info about this library you can check the <a href="https://github.com/fabi1cazenave/webL10n">github repo</a> or you can also check the <a href="https://developer.mozilla.org/en-US/Apps/Build/Localization/Localizing_Open_Web_Apps">MDN page about localizing webapps</a>.</p>
+
+<p>But even if this library is easy to use It doesn't mean is free of issues:</p>
+
+<ul>
+<li><p>If user has javascript disabled (something really odd) or   using No Script translations would not work, that's why you should write by default in a language that almost everybody can understand(english).</p></li>
+<li><p>If you have a html element in the middle of a phrase like a link, webl10n is just going to replace text before link.</p>
+
+<p>In order to translate link text you have to add a different phrase id, the same applies to text after link where you also need to wrap it with a html tag.</p></li>
+</ul>
+
+<pre><code class="html">&lt;p data-l10n-id="first"&gt;First part of text &lt;a href="http://lcamacho.github.io" data-l10n-id="link"&gt;link to my blog&lt;/a&gt; &lt;span data-l10n-id="second"&gt; text after link&lt;/span&gt;&lt;/p&gt;
+</code></pre>
+
+<h2 id="thees419casees419anamees419a"><a href="https://lcamacho.github.io/#es-419">The es-419 case</a><a name="es-419"></a></h2>
+
+<p>With translations ready the last step was testing and It works on most browsers, the only two that came as suprise were Chrome and the new Opera that now is based on Chromium.</p>
+
+<p>Both were showing english version instead of spanish even though I were using them in spanish, so to be sure about browser language I executed in console <code>navigator.language</code> just to see what returns.</p>
+
+<p><img src="https://lcamacho.github.io/content/images/2014/10/Captura-de-pantalla-2014-10-30-a-las-16-19-32.png" alt="navigator.language returns es-419"></p>
+
+<p>That was akward to me because browsers like Firefox returns "es-AR" (language id - country id), but then I found on IANA that <a href="https://www.iana.org/assignments/lang-tags/es-419">"es-419" is the id for latin american spanish</a> something like a neutral spanish for latam (if such thing really exists, <a href="https://www.youtube.com/watch?v=4LjDe4sLER0">let's remember how hard it is to speak spanish</a>).</p>
+
+<p>To make webl10n work with this language you need to add a couple of lines to locales.ini, first <code>[es-419]</code> and then the line to indicate the path to spanish translation file, but to avoid this I sended a <a href="https://github.com/fabi1cazenave/webL10n/pull/47">pull request</a> to allow webl10n to recognize language ids that contains numbers and redirect to base language, like in this case to be redirected to <code>[es]</code> translations.</p>]]></description><link>https://lcamacho.github.io/localization-in-browser/</link><guid isPermaLink="false">f2ea854e-d2f1-459a-bd65-af92015f2c45</guid><category><![CDATA[localization]]></category><dc:creator><![CDATA[Leonard Camacho]]></dc:creator><pubDate>Thu, 30 Oct 2014 23:51:00 GMT</pubDate></item><item><title><![CDATA[Localizacion en el navegador y el caso es-419]]></title><description><![CDATA[<p>En la busqueda de que el blog se adapte al idioma del usuario me tope con un par de problemas:</p>
+
+<ol>
+<li>Ghost, la plataforma de blogging que estoy usando aun no tiene una forma definida de como realizar traducciones.  </li>
+<li>No puedo detectar el idioma del usuario en backend ya que el blog esta en github pages.</li>
+</ol>
+
+<p>De manera que solo queda la opción de usar javascript para detectar el idioma y realizar la localización.</p>
+
+<p>Por fortuna ya la gente de Mozilla se habia topado con este problema de manera que crearon el proyecto webl10n y la forma de utilizarlo es muy sencilla:</p>
+
+<ul>
+<li>Creas un archivo locales.ini, donde vas a indicar los idiomas que vas a detectar asi como el archivo donde se encontraran las traducciones para cada idioma.</li>
+</ul>
+
+<pre><code>@import url(en/app.properties)
+[es]
+@import url(es/app.properties)
+</code></pre>
+
+<ul>
+<li>Creas los archivos de traducciones, en este caso app.properties, aqui colocas el identificador de la oración y su traducción.</li>
+</ul>
+
+<pre><code class="        ">read-more = Leer más
+share-it = ¿Te gusto el artículo? Compartelo.
+</code></pre>
+
+<ul>
+<li>Se agrega la libreria y el locales.ini a la página.</li>
+</ul>
+
+<pre><code class="html        ">&lt;link rel="resource" type="application/l10n" href="locales/locales.ini"&gt;
+&lt;script type="text/javascript" src="js/l10n.js"&gt;
+</code></pre>
+
+<ul>
+<li>Finalmente agregas el identificador de la oración al html utilizando el atributo "data-l10n-id".</li>
+</ul>
+
+<pre><code class="html">&lt;h4 data-l10n-id="share-it"&gt;Liked this post ? Share it.&lt;/h4&gt;
+</code></pre>
+
+<p>Si quieres más informacion de la librería puedes ver revisar el <a href="https://github.com/fabi1cazenave/webL10n">repositorio del proyecto</a> o la página de <a href="https://developer.mozilla.org/en-US/Apps/Build/Localization/Localizing_Open_Web_Apps">localización de webapps en MDN</a>.</p>
+
+<p>A pesar de los fácil de usar, la librería tiene algunos problemas:</p>
+
+<ul>
+<li><p>Si el usuario tiene desactivado javascript (algo poco probable) o si esta usando No Script no se mostraran las traducciones, por esto es mejor escribir por defecto en un idioma que la mayoria entienda (ingles).</p></li>
+<li><p>Cuando se tiene un elemento html en medio de la oración por ejemplo un link, la traducción solo reemplaza la parte de la oración antes del link. </p>
+
+<p>Para poder traducir el texto del link se le debe tratar como una oración diferente agregandole un identificador e igualmente con el resto de la oración se le debe encerrar en otro elemento html para tratarlo como otra oración.</p></li>
+</ul>
+
+<pre><code class="html">&lt;p data-l10n-id="primero"&gt;Primera parte de la oracion &lt;a href="http://lcamacho.github.io" data-l10n-id="link"&gt;el link a mi blog&lt;/a&gt; &lt;span data-l10n-id="segundo"&gt;y la segunda parte&lt;/span&gt;&lt;/p&gt;
+</code></pre>
+
+<h2 id="elcasoes419es419anamees419a"><a href="https://lcamacho.github.io/#es-419">El caso es-419</a><a name="es-419"></a></h2>
+
+<p>Ya con todas las traducciones restaba probarlo y en casi todos los navegadores funciono, la sorpresa vino con Chrome y el nuevo Opera que ahora usa el mismo motor de Chrome. </p>
+
+<p>En ambos se mostraba la versión en ingles a pesar de estar usandolos en español; para estar seguro del idioma del navegador ejecute en consola <code>navigator.language</code> para ver el identificador que devuelve Chrome.</p>
+
+<p><img src="https://lcamacho.github.io/content/images/2014/10/Captura-de-pantalla-2014-10-30-a-las-16-19-32.png" alt="navigator.language devuelve es-419"></p>
+
+<p>Lo cual me parecio un poco raro porque en otros navegadores como Firefox devuelve "es-AR" (identificador de idioma - identificador de pais), pero luego encontre en la IANA que <a href="https://www.iana.org/assignments/lang-tags/es-419">"es-419" es el identificador para el español de latinoamerica</a> algo asi como un español neutro para latinoamerica (si es que tal cosa existe, <a href="https://www.youtube.com/watch?v=Xyp7xt-ygy0">recordemos lo dificil que es hablar el español</a>).</p>
+
+<p>Para lograr que webl10n reconozca este idioma basta con colocar en el locales.ini un par de lineas, primero <code>[es-419]</code> y luego la linea para indicar donde esta el archivo de traducciones pero para evitar esto envie un <a href="https://github.com/fabi1cazenave/webL10n/pull/47">pull request</a> para lograr que la librería reconozca identificadores de idiomas que contengan números y sean correctamente dirigidos al idioma base, en este caso para ser dirigidos a las traducciones de <code>[es]</code>.</p>]]></description><link>https://lcamacho.github.io/localizacion-en-el-navegador/</link><guid isPermaLink="false">b62aa896-d9b3-414f-8ba6-b2d9c5af31c4</guid><category><![CDATA[localization]]></category><dc:creator><![CDATA[Leonard Camacho]]></dc:creator><pubDate>Thu, 30 Oct 2014 20:51:00 GMT</pubDate></item><item><title><![CDATA[Aqui estoy]]></title><description><![CDATA[<p>Creo que si lo pienso mucho nunca terminare de escribir este post, asi que aqui voy.</p>
 
 <p>Soy un adicto a twitter que como a muchos le gusta saber lo que esta pasando en este momento, pero que también disfruta de leer ya sea de programación (soy desarrollador y mucho de lo que escribire aquí sera para desarrolladores), una opinion o simplemente un buen articulo que me ayude a expandir mi punto de vista sobre las cosas.</p>
 

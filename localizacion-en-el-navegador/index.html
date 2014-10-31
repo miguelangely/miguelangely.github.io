@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-    <title>Aqui estoy</title>
+    <title>Localizacion en el navegador y el caso es-419</title>
     <meta name="description" content="" />
 
     <meta name="HandheldFriendly" content="True" />
@@ -24,20 +24,21 @@
 
     <link rel="resource" type="application/l10n" href="../assets/locales/locales.ini?v=c9e8bcbb40" />
 
-    <link rel="canonical" href="https://lcamacho.github.io/aqui-estoy/" />
+    <link rel="canonical" href="https://lcamacho.github.io/localizacion-en-el-navegador/" />
 
     <meta property="og:site_name" content="Leonard Camacho blog" />
     <meta property="og:type" content="article" />
-    <meta property="og:title" content="Aqui estoy" />
-    <meta property="og:description" content="Creo que si lo pienso mucho nunca terminare de escribir este post, asi que aqui voy. Soy un adicto a twitter que como a muchos le gusta saber lo que esta pasando en este momento, pero que también disfruta de..." />
-    <meta property="og:url" content="https://lcamacho.github.io/aqui-estoy/" />
-    <meta property="article:published_time" content="2014-08-20T21:51:05.280Z" />
-    <meta property="article:modified_time" content="2014-10-31T00:35:08.322Z" />
+    <meta property="og:title" content="Localizacion en el navegador y el caso es-419" />
+    <meta property="og:description" content="En la busqueda de que el blog se adapte al idioma del usuario me tope con un par de problemas: Ghost, la plataforma de blogging que estoy usando aun no tiene una forma definida de como realizar traducciones.   No puedo..." />
+    <meta property="og:url" content="https://lcamacho.github.io/localizacion-en-el-navegador/" />
+    <meta property="article:published_time" content="2014-10-30T20:51:00.000Z" />
+    <meta property="article:modified_time" content="2014-10-30T23:57:00.703Z" />
+    <meta property="article:tag" content="localization" />
 
     <meta name="twitter:card" content="summary" />
-    <meta name="twitter:title" content="Aqui estoy" />
-    <meta name="twitter:description" content="Creo que si lo pienso mucho nunca terminare de escribir este post, asi que aqui voy. Soy un adicto a twitter que como a muchos le gusta saber lo que esta pasando en este momento, pero que también disfruta de..." />
-    <meta name="twitter:url" content="https://lcamacho.github.io/aqui-estoy/" />
+    <meta name="twitter:title" content="Localizacion en el navegador y el caso es-419" />
+    <meta name="twitter:description" content="En la busqueda de que el blog se adapte al idioma del usuario me tope con un par de problemas: Ghost, la plataforma de blogging que estoy usando aun no tiene una forma definida de como realizar traducciones.   No puedo..." />
+    <meta name="twitter:url" content="https://lcamacho.github.io/localizacion-en-el-navegador/" />
 
     <script type="application/ld+json">
 {
@@ -51,18 +52,19 @@
         "url": "https://lcamacho.github.io/author/leonard",
         "sameAs": null
     },
-    "headline": "Aqui estoy",
-    "url": "https://lcamacho.github.io/aqui-estoy/",
-    "datePublished": "2014-08-20T21:51:05.280Z",
-    "dateModified": "2014-10-31T00:35:08.322Z",
-    "description": "Creo que si lo pienso mucho nunca terminare de escribir este post, asi que aqui voy. Soy un adicto a twitter que como a muchos le gusta saber lo que esta pasando en este momento, pero que también disfruta de"
+    "headline": "Localizacion en el navegador y el caso es-419",
+    "url": "https://lcamacho.github.io/localizacion-en-el-navegador/",
+    "datePublished": "2014-10-30T20:51:00.000Z",
+    "dateModified": "2014-10-30T23:57:00.703Z",
+    "keywords": "localization",
+    "description": "En la busqueda de que el blog se adapte al idioma del usuario me tope con un par de problemas: Ghost, la plataforma de blogging que estoy usando aun no tiene una forma definida de como realizar traducciones.   No puedo"
 }
     </script>
 
     <meta name="generator" content="Ghost 0.5" />
     <link rel="alternate" type="application/rss+xml" title="Leonard Camacho blog" href="../rss/index.html" />
 </head>
-<body class="post-template">
+<body class="post-template tag-localization">
 
 <div id="outdated">
     <h6>Your browser is out-of-date!</h6>
@@ -139,35 +141,96 @@
 
 <main class="content" role="main">
 
-    <article class="post">
+    <article class="post tag-localization">
 
 
-            <h1 class="post-title">Aqui estoy</h1>
+            <h1 class="post-title">Localizacion en el navegador y el caso es-419</h1>
 
-            <span class="post-meta label"><time datetime="2014-08-20">20 Aug 2014</time></span>
+            <span class="post-meta label"><time datetime="2014-10-30">30 Oct 2014</time></span>
 
             <section class="post-content">
-                <p>Creo que si lo pienso mucho nunca terminare de escribir este post, asi que aqui voy.</p>
+                <p>En la busqueda de que el blog se adapte al idioma del usuario me tope con un par de problemas:</p>
 
-<p>Soy un adicto a twitter que como a muchos le gusta saber lo que esta pasando en este momento, pero que también disfruta de leer ya sea de programación (soy desarrollador y mucho de lo que escribire aquí sera para desarrolladores), una opinion o simplemente un buen articulo que me ayude a expandir mi punto de vista sobre las cosas.</p>
+<ol>
+<li>Ghost, la plataforma de blogging que estoy usando aun no tiene una forma definida de como realizar traducciones.  </li>
+<li>No puedo detectar el idioma del usuario en backend ya que el blog esta en github pages.</li>
+</ol>
 
-<p>Y ya que el internet me ha dado la posibilidad de leer sobre tantas cosas creo que puedo aportar algo en este espacio que precisamente el internet me da para expresarme.</p>
+<p>De manera que solo queda la opción de usar javascript para detectar el idioma y realizar la localización.</p>
 
-<p>Mientras me ajusto a esto de tener un blog seguramente varias cosas van a cambiar desde como se ven las cosas hasta como escribo pero es precisamente parte de las cosas que me motivan a tener el blog.</p>
-                        <aside class="tags fi-pricetag-multiple" data-l10n-id="no-tag">No tag</aside>
+<p>Por fortuna ya la gente de Mozilla se habia topado con este problema de manera que crearon el proyecto webl10n y la forma de utilizarlo es muy sencilla:</p>
+
+<ul>
+<li>Creas un archivo locales.ini, donde vas a indicar los idiomas que vas a detectar asi como el archivo donde se encontraran las traducciones para cada idioma.</li>
+</ul>
+
+<pre><code>@import url(en/app.properties)
+[es]
+@import url(es/app.properties)
+</code></pre>
+
+<ul>
+<li>Creas los archivos de traducciones, en este caso app.properties, aqui colocas el identificador de la oración y su traducción.</li>
+</ul>
+
+<pre><code class="        ">read-more = Leer más
+share-it = ¿Te gusto el artículo? Compartelo.
+</code></pre>
+
+<ul>
+<li>Se agrega la libreria y el locales.ini a la página.</li>
+</ul>
+
+<pre><code class="html        ">&lt;link rel="resource" type="application/l10n" href="locales/locales.ini"&gt;
+&lt;script type="text/javascript" src="js/l10n.js"&gt;
+</code></pre>
+
+<ul>
+<li>Finalmente agregas el identificador de la oración al html utilizando el atributo "data-l10n-id".</li>
+</ul>
+
+<pre><code class="html">&lt;h4 data-l10n-id="share-it"&gt;Liked this post ? Share it.&lt;/h4&gt;
+</code></pre>
+
+<p>Si quieres más informacion de la librería puedes ver revisar el <a href="https://github.com/fabi1cazenave/webL10n">repositorio del proyecto</a> o la página de <a href="https://developer.mozilla.org/en-US/Apps/Build/Localization/Localizing_Open_Web_Apps">localización de webapps en MDN</a>.</p>
+
+<p>A pesar de los fácil de usar, la librería tiene algunos problemas:</p>
+
+<ul>
+<li><p>Si el usuario tiene desactivado javascript (algo poco probable) o si esta usando No Script no se mostraran las traducciones, por esto es mejor escribir por defecto en un idioma que la mayoria entienda (ingles).</p></li>
+<li><p>Cuando se tiene un elemento html en medio de la oración por ejemplo un link, la traducción solo reemplaza la parte de la oración antes del link. </p>
+
+<p>Para poder traducir el texto del link se le debe tratar como una oración diferente agregandole un identificador e igualmente con el resto de la oración se le debe encerrar en otro elemento html para tratarlo como otra oración.</p></li>
+</ul>
+
+<pre><code class="html">&lt;p data-l10n-id="primero"&gt;Primera parte de la oracion &lt;a href="http://lcamacho.github.io" data-l10n-id="link"&gt;el link a mi blog&lt;/a&gt; &lt;span data-l10n-id="segundo"&gt;y la segunda parte&lt;/span&gt;&lt;/p&gt;
+</code></pre>
+
+<h2 id="elcasoes419es419anamees419a"><a href="index.html#es-419">El caso es-419</a><a name="es-419"></a></h2>
+
+<p>Ya con todas las traducciones restaba probarlo y en casi todos los navegadores funciono, la sorpresa vino con Chrome y el nuevo Opera que ahora usa el mismo motor de Chrome. </p>
+
+<p>En ambos se mostraba la versión en ingles a pesar de estar usandolos en español; para estar seguro del idioma del navegador ejecute en consola <code>navigator.language</code> para ver el identificador que devuelve Chrome.</p>
+
+<p><img src="../content/images/2014/10/Captura-de-pantalla-2014-10-30-a-las-16-19-32.png" alt="navigator.language devuelve es-419" /></p>
+
+<p>Lo cual me parecio un poco raro porque en otros navegadores como Firefox devuelve "es-AR" (identificador de idioma - identificador de pais), pero luego encontre en la IANA que <a href="https://www.iana.org/assignments/lang-tags/es-419">"es-419" es el identificador para el español de latinoamerica</a> algo asi como un español neutro para latinoamerica (si es que tal cosa existe, <a href="https://www.youtube.com/watch?v=Xyp7xt-ygy0">recordemos lo dificil que es hablar el español</a>).</p>
+
+<p>Para lograr que webl10n reconozca este idioma basta con colocar en el locales.ini un par de lineas, primero <code>[es-419]</code> y luego la linea para indicar donde esta el archivo de traducciones pero para evitar esto envie un <a href="https://github.com/fabi1cazenave/webL10n/pull/47">pull request</a> para lograr que la librería reconozca identificadores de idiomas que contengan números y sean correctamente dirigidos al idioma base, en este caso para ser dirigidos a las traducciones de <code>[es]</code>.</p>
+                        <aside class="tags fi-pricetag-multiple">Posted on <a href="../tag/localization/index.html">localization</a></aside>
             </section>
             <hr>
             <footer class="post-footer">
 
                 <section class="share">
                     <h4 data-l10n-id="share-it">Liked this post ? Share it.</h4>
-                    <a class="fi-social-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https://lcamacho.github.io/aqui-estoy/"
+                    <a class="fi-social-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https://lcamacho.github.io/localizacion-en-el-navegador/"
                         onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
                     </a>
-                    <a class="fi-social-twitter" href="https://twitter.com/share?text=Aqui%20estoy&amp;url=https://lcamacho.github.io/aqui-estoy/"
+                    <a class="fi-social-twitter" href="https://twitter.com/share?text=Localizacion%20en%20el%20navegador%20y%20el%20caso%20es-419&amp;url=https://lcamacho.github.io/localizacion-en-el-navegador/"
                         onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
                     </a>
-                    <a class="fi-social-google-plus" href="https://plus.google.com/share?url=https://lcamacho.github.io/aqui-estoy/"
+                    <a class="fi-social-google-plus" href="https://plus.google.com/share?url=https://lcamacho.github.io/localizacion-en-el-navegador/"
                        onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
                     </a>
                 </section>
@@ -206,7 +269,7 @@
         <div id="disqus_thread"></div>
 <script type="text/javascript">
     var disqus_shortname = 'leonardcamachoblog'; // required: replace example with your forum shortname
-    var disqus_identifier = '3'; // make sure to use the post.id as an identifier, otherwise disqus will use the pages url per default, which might be problematic...
+    var disqus_identifier = '9'; // make sure to use the post.id as an identifier, otherwise disqus will use the pages url per default, which might be problematic...
     var disqus_config;
 
     window.addEventListener('localized', function() {
