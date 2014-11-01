@@ -13,19 +13,19 @@
     <link rel="shortcut icon" href="../assets/favicon.ico">
 
 
-    <link rel="stylesheet" type="text/css" href="../assets/css/normalize.css?v=c9e8bcbb40" />
-    <link rel="stylesheet" type="text/css" href="../assets/css/foundation.min.css?v=c9e8bcbb40" />
+    <link rel="stylesheet" type="text/css" href="../assets/css/normalize.css?v=8a6c24daa2" />
+    <link rel="stylesheet" type="text/css" href="../assets/css/foundation.min.css?v=8a6c24daa2" />
     <!--[if lte IE 8]>
-        <link rel="stylesheet" type="text/css" href="/assets/css/outdatedBrowser.min.css?v=c9e8bcbb40">
+        <link rel="stylesheet" type="text/css" href="/assets/css/outdatedBrowser.min.css?v=8a6c24daa2">
     <![endif]-->
-    <link rel="stylesheet" type="text/css" href="../assets/fonts/foundation-icons/foundation-icons.css?v=c9e8bcbb40" />
-    <link rel="stylesheet" type="text/css" href="../assets/css/styles.css?v=c9e8bcbb40" />
+    <link rel="stylesheet" type="text/css" href="../assets/fonts/foundation-icons/foundation-icons.css?v=8a6c24daa2" />
+    <link rel="stylesheet" type="text/css" href="../assets/css/styles.css?v=8a6c24daa2" />
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:300,700,400|Source+Sans+Pro:300,400,600,700,900,300italic,400italic,600italic,700italic,900italic" />
 
-    <link rel="resource" type="application/l10n" href="../assets/locales/locales.ini?v=c9e8bcbb40" />
+    <link rel="resource" type="application/l10n" href="../assets/locales/locales.ini?v=8a6c24daa2" />
 
     <link rel="canonical" href="https://lcamacho.github.io/localization-in-browser/" />
-
+    
     <meta property="og:site_name" content="Leonard Camacho blog" />
     <meta property="og:type" content="article" />
     <meta property="og:title" content="Localization in browser and the es-419 case" />
@@ -34,12 +34,12 @@
     <meta property="article:published_time" content="2014-10-30T23:51:00.000Z" />
     <meta property="article:modified_time" content="2014-10-30T23:56:49.077Z" />
     <meta property="article:tag" content="localization" />
-
+    
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:title" content="Localization in browser and the es-419 case" />
     <meta name="twitter:description" content="Trying to get this blog to adapt to user's language I struck with a couple of issues: Ghost, the blogging platform that I'm using doesn't have a way to create and use translations.   I can't detect on backend because this..." />
     <meta name="twitter:url" content="https://lcamacho.github.io/localization-in-browser/" />
-
+    
     <script type="application/ld+json">
 {
     "@context": "http://schema.org",
@@ -137,7 +137,7 @@
 
 
 <div class="small-16 medium-16 large-12 columns main-column left">
-
+    
 
 <main class="content" role="main">
 
@@ -173,23 +173,23 @@
 <li>Then create translation files, in this case app.properties, inside you need to write the phrase id and translation.</li>
 </ul>
 
-<pre><code class="        ">read-more = Leer más
-share-it = ¿Te gusto el artículo? Compartelo.
+<pre><code class="        ">read-more = Leer más  
+share-it = ¿Te gusto el artículo? Compartelo.  
 </code></pre>
 
 <ul>
 <li>You've to add the library and the locales.ini file to page.</li>
 </ul>
 
-<pre><code class="html        ">&lt;link rel="resource" type="application/l10n" href="locales/locales.ini"&gt;
-&lt;script type="text/javascript" src="js/l10n.js"&gt;
+<pre><code class="html        ">&lt;link rel="resource" type="application/l10n" href="locales/locales.ini"&gt;  
+&lt;script type="text/javascript" src="js/l10n.js"&gt;  
 </code></pre>
 
 <ul>
 <li>Finally add phrase id to html using "data-l10n-id" attribute.</li>
 </ul>
 
-<pre><code class="html">&lt;h4 data-l10n-id="share-it"&gt;Liked this post ? Share it.&lt;/h4&gt;
+<pre><code class="html">&lt;h4 data-l10n-id="share-it"&gt;Liked this post ? Share it.&lt;/h4&gt;  
 </code></pre>
 
 <p>If you want more info about this library you can check the <a href="https://github.com/fabi1cazenave/webL10n">github repo</a> or you can also check the <a href="https://developer.mozilla.org/en-US/Apps/Build/Localization/Localizing_Open_Web_Apps">MDN page about localizing webapps</a>.</p>
@@ -203,7 +203,7 @@ share-it = ¿Te gusto el artículo? Compartelo.
 <p>In order to translate link text you have to add a different phrase id, the same applies to text after link where you also need to wrap it with a html tag.</p></li>
 </ul>
 
-<pre><code class="html">&lt;p data-l10n-id="first"&gt;First part of text &lt;a href="http://lcamacho.github.io" data-l10n-id="link"&gt;link to my blog&lt;/a&gt; &lt;span data-l10n-id="second"&gt; text after link&lt;/span&gt;&lt;/p&gt;
+<pre><code class="html">&lt;p data-l10n-id="first"&gt;First part of text &lt;a href="http://lcamacho.github.io" data-l10n-id="link"&gt;link to my blog&lt;/a&gt; &lt;span data-l10n-id="second"&gt; text after link&lt;/span&gt;&lt;/p&gt;  
 </code></pre>
 
 <h2 id="thees419casees419anamees419a"><a href="index.html#es-419">The es-419 case</a><a name="es-419"></a></h2>
@@ -242,8 +242,8 @@ share-it = ¿Te gusto el artículo? Compartelo.
                     <section>
                         <h4>Leonard Camacho</h4>
                         <img src="/content/images/2014/10/icon128-1.png">
-
-
+                        
+                        
                     </section>
                     <footer>
                          <p></p>
@@ -299,28 +299,40 @@ share-it = ¿Te gusto el artículo? Compartelo.
 
 </div>
 
-    <script src="../public/jquery.min.js?v=c9e8bcbb40"></script>
+    <script src="../public/jquery.min.js?v=8a6c24daa2"></script>
 
     <!--[if lte IE 8]>
-        <script type="text/javascript" src="/assets/js/outdatedBrowser.min.js?v=c9e8bcbb40"></script>
+        <script type="text/javascript" src="/assets/js/outdatedBrowser.min.js?v=8a6c24daa2"></script>
     <![endif]-->
-    <script type="text/javascript" src="../assets/js/vendor/fastclick.js?v=c9e8bcbb40"></script>
-    <script type="text/javascript" src="../assets/js/vendor/modernizr.js?v=c9e8bcbb40"></script>
-    <script type="text/javascript" src="../assets/js/l10n.min.js?v=c9e8bcbb40"></script>
+    <script type="text/javascript" src="../assets/js/vendor/fastclick.js?v=8a6c24daa2"></script>
+    <script type="text/javascript" src="../assets/js/vendor/modernizr.js?v=8a6c24daa2"></script>
+    <script type="text/javascript" src="../assets/js/l10n.min.js?v=8a6c24daa2"></script>
 
-    <script type="text/javascript" src="../assets/js/jquery.fitvids.js?v=c9e8bcbb40"></script>
-    <script type="text/javascript" src="../assets/js/index.js?v=c9e8bcbb40"></script>
+    <script type="text/javascript" src="../assets/js/jquery.fitvids.js?v=8a6c24daa2"></script>
+    <script type="text/javascript" src="../assets/js/index.js?v=8a6c24daa2"></script>
 
-    <script type="text/javascript" src="../assets/js/foundation.min.js?v=c9e8bcbb40"></script>
-    <script type="text/javascript" src="../assets/js/overlay/snap.svg-min.js?v=c9e8bcbb40"></script>
-    <script type="text/javascript" src="../assets/js/overlay/classie.js?v=c9e8bcbb40"></script>
-    <script type="text/javascript" src="../assets/js/overlay/demo1.js?v=c9e8bcbb40"></script>
-    <script type="text/javascript" src="../assets/js/vendor/smoothscroll.js?v=c9e8bcbb40"></script>
+    <script type="text/javascript" src="../assets/js/foundation.min.js?v=8a6c24daa2"></script>
+    <script type="text/javascript" src="../assets/js/overlay/snap.svg-min.js?v=8a6c24daa2"></script>
+    <script type="text/javascript" src="../assets/js/overlay/classie.js?v=8a6c24daa2"></script>
+    <script type="text/javascript" src="../assets/js/overlay/demo1.js?v=8a6c24daa2"></script>
+    <script type="text/javascript" src="../assets/js/vendor/smoothscroll.js?v=8a6c24daa2"></script>
 
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 
     <script>
       $(document).foundation();
+    </script>
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-56295147-1', 'auto');
+      ga('require', 'displayfeatures');
+      ga('send', 'pageview');
+
     </script>
 </body>
 </html>
