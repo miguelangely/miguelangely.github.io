@@ -1,7 +1,7 @@
 {
-  "name": "myblog",
-  "description": "este es mi blog",
-  "icons": {"128": "201108/bienvenido_13.jpg"},
+  "name": "Bienvenido",
+  "description": "Bienvenido a mi mundo",
+  "icons": {"128": "wp-content/uploads/2013/02/Yin_yang.svg_.png"},
   "version": "0.1",
   "launch_path": "github.com/lcamacho/index.html",
   "developer": {
