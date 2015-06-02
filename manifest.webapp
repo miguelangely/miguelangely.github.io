@@ -1,7 +1,7 @@
 {
   "name": "Bienvenido",
   "description": "Bienvenido a mi mundo",
-  "icons": {"128": "avatar_45c26b662d9e_128.png"},
+  "icons": {"128": "http://38.media.tumblr.com/avatar_45c26b662d9e_128.png},
   "version": "0.1",
   "launch_path": "github.com/lcamacho/index.html",
   "developer": {
