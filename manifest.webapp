@@ -5,5 +5,9 @@
     "128": "/assets/images/icon128.png"
   },
   "vesion": "0.1",
-  "launch_path": "/index.html"
+  "launch_path": "/index.html",
+  "developer": {
+    "name": "Leonard Camacho",</code>
+    "url": "http://leonardcamacho.me"</code>
+  }
 }
