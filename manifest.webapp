@@ -1,11 +1,11 @@
 {
   "name": "myblog",
   "description": "este es mi blog",
-  "icons": {"128": "/2/739239850.jpg"},
+  "icons": {"128": "2013/10/origin_4542454841.jpg"},
   "version": "0.1",
-  "launch_path": "/index.html",
+  "launch_path": "github.com/lcamacho/index.html",
   "developer": {
-    "name": "MIguel",
+    "name": "Miguel",
     "url": "http://github.com"
   }
 }
