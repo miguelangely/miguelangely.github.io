@@ -1,8 +1,8 @@
 {
   "name": "Miblog",
   "description": "este es mi blog",
-  "icons": {"128": },
-  "version": "0.1:,
+  "icons": {"128": "/assets/images/icon128.png"},
+  "version": "0.1",
   "launch_path": "/index.html",
   "developer": {
     "name": "Leonard",
